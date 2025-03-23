@@ -1,0 +1,568 @@
+body{
+    padding: 0;
+    width: 98%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#whole{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container1{
+    width: 75%;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    margin-top: 5%;
+}
+#cont1{
+    height: 95%;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;   
+    background-color: blueviolet;
+}
+
+#cont1 img{
+    width: 50%;
+    height: 50%;
+}
+#cont2{
+    height: 95%;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cont2 form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+#cont2 h1{
+    font-size: 45px;
+    color: blueviolet;
+}
+#cont2 input{
+    width: 15vw;
+    height: 5vh;
+    border-radius:2.5vh;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#cont2 input:hover{
+    transform: translateY(-7px);
+    transition: transform 0.3s;
+}
+
+#cont2 input::placeholder
+{
+    color: black;
+    font-weight:500;
+    opacity: 3;
+}
+
+#submit{
+    width: 7.5vw;
+    height: 5vh;
+    border-radius:2.5vh;
+    color: white;
+    background-color: blueviolet;
+    border: 0.5px solid  rgb(99, 23, 170);
+    box-shadow:2px 2px 5px rgb(162, 144, 144);
+}
+
+#submit:active
+{
+    scale: 0.96;
+}
+
+#submit:hover
+{
+    cursor: pointer;
+}
+
+#swhole{
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#scontainer1{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+#scontainer1 h1{
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 38px;
+}
+#scontainer1 form{
+    width: 90%;
+    line-height: 2.4;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:400;
+}
+
+#scontainer1 input::placeholder
+{
+    color: black;
+    font-weight:500;
+    opacity: 3;
+}
+
+#scontainer1 input, #scontainer1 select{
+    display: flex;
+    justify-self: center;
+    border-radius: 11px;
+    width: 50%;
+    height: 5vh;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#scontainer1 input:hover, #scontainer1 select:hover
+{
+    transform: translateY(-7px);
+    transition: transform 0.3s;
+}
+
+
+#scontainer1 button{
+    width: 7.5vw;
+    height: 5vh;
+    border-radius:2.5vh;
+    color: white;
+    background-color: blueviolet;
+    margin-left: 43%;
+    margin-bottom: 2%;
+    border: 0.5px solid  rgb(99, 23, 170);
+    box-shadow:2px 2px 5px rgb(162, 144, 144);
+}
+
+#scontainer1 button:hover
+{
+    box-shadow:2px 2px 5px rgb(162, 144, 144);
+    cursor: pointer;
+}
+
+#scontainer1 button:active
+{
+    scale: 0.96;
+}
+
+@media (max-width:768px) {   
+    #cont1{
+        display: none;
+    }
+    
+    #cont1 img{
+        width: 50%;
+        height: 50%;
+    }
+    #cont2{
+        width: 80%;
+    }
+
+    #cont2 input{
+        width: 70%;
+    }
+
+    #submit{
+        width: 42vw;
+        height: 5vh;
+        border-radius:2.5vh;
+        color: white;
+        background-color: blueviolet;
+    }
+
+    #scontainer1{
+        width: 70%;
+    }
+    
+    #scontainer1 input, #scontainer1 select{
+        width: 70%;
+    }
+    
+    #scontainer1 input:hover, #scontainer1 select:hover
+    {
+        transform: translateY(0px);
+    }
+    
+    
+    #scontainer1 button{
+        width: 42vw;
+        margin-top: -8%;
+        margin-left: 16%;
+    }
+}
+
+#acontainer1{
+    margin-top: 2%;
+    width: 95%;
+    height: 90vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius:12px;
+}
+#small{
+    width: 20%;
+    height: 89.5%;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    cursor: pointer;
+}
+#small h2{
+    text-align: center;
+}
+#small ul{
+    list-style: none;
+    line-height: 2.5;
+    font-size: 17px;
+}
+#small li{
+    padding: 1.5%;
+}
+#small li:hover{
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 12px;
+}
+#small a{
+    text-decoration: none;
+    color: white;
+}
+#large{
+    width:75%;
+    height: 100%;
+}
+#heading{
+    width:55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+#heading h1{
+    color: blueviolet;
+}
+#heading input{
+    height: 4.5vh;
+    width: 50%;
+    border-radius: 2.5vh;
+    padding-left: 5%;
+    border: bluevioletS;
+}
+#content {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+#status{
+    width: 28%;
+    height: 56vh;
+    line-height: 2;
+}
+canvas {
+    background-color: white;
+    width: 100%;
+    height: 30vh;
+    line-height: 1;
+    margin-bottom: 1%;
+    margin-top: -5%;
+  }
+#summery{
+    width: 70%;
+}
+h2 {
+    color: purple;
+}
+#progress{
+    width: 100%;
+    height:56vh;
+    padding: 1%;
+    line-height: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 12px;
+}
+.progress-container {
+    width: 80%;
+    height: 2vh;
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    margin: 15px 0;
+}
+.progress-bar {
+    height: 2vh;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+#btns{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0.3%;
+    border: 1px solid blueviolet;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+#btns button{
+    color: blueviolet;
+    background-color: white;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    height: 100%;
+    width: 25%;
+    object-fit: cover;
+ 
+}
+#tabels{
+    width: 95.5%;
+    height: fit-content;
+}
+#summery fieldset{
+    width: 100%;
+    height: fit-content;
+}
+#summery table{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#content h3{
+  color: purple;
+}
+#content tr{
+    line-height: 2.5;
+}
+#content td{
+    font-size: 15px;
+    width: 30vw;
+}
+#num{
+    text-align: center;
+}
+
+#userr{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 90vh;
+    margin: 2%;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    gap: 40px;
+}
+#usertable{
+    width: 70%;
+    height: 95.5%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+   }
+#uheading{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#usertable h1{
+    color: blueviolet;
+}
+#left{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 12%;
+}
+#left input{
+    height: 6vh;
+    width: 65%;
+    border-radius: 3vh;
+    padding-left: 10%;
+}
+#left button{
+    height: 6vh;
+    width: 25%;
+    background-color: blueviolet;
+    color: white;
+    float: right;
+    border-radius: 8px;
+}
+
+
+#usertable table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#usertable th{
+    color: blueviolet;
+    height: 10vh;
+    width: 25%;
+    border: 2px solid black;
+}
+#usertable tr{
+    line-height: 2.5;
+}
+#usertable td{
+    height: 3vh;
+    border: 2px solid black;
+    font-size: 15px;
+}
+#act{
+    background-color: white;
+    color: blueviolet;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#report{
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 12px;
+}
+#side{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+#up{
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+}
+#upleft{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+#rheading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#rheading h1{
+    color: blueviolet;
+}
+#rheading input{
+    width: 60%;
+    height: 4.5vh;
+    padding: 2%;
+    border-radius: 2.5vh;
+}
+#upleft p{
+    padding: 2%;
+    line-height: 1.5;
+}
+#upright canvas {
+    width: 20%;  /* Let the canvas take up 100% of its parent width */
+    height: 45vh; /* Ensure the canvas uses all available height */
+}
+#upright{
+    width: 50%;
+    height: 49vh; 
+    position: relative;
+    padding-top: 10%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+#down{
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+}
+#downleft{
+    width: 50%;
+    height: 85%;
+    padding: 2%;
+    line-height: 2;
+    font-family: sans-serif;
+}
+#downleft h3{
+    color: blueviolet;
+}
+
+#downright{
+    width: 50%;
+    height: 50%;
+    margin-top: 22vh;
+}
+#downright table{
+    width: 100%;
+    margin-top: 2%;
+    padding: 5%;
+}
+#downright th,td{
+    line-height: 2;
+    border: 1px solid gray;
+}
+#downright th{
+    color: blueviolet
+}

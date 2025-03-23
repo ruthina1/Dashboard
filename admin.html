@@ -1,0 +1,431 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+</head>
+<body> 
+    
+
+    <div id="acontainer1">
+        <div id="small">
+            <h1 style="text-align: center;">Admin</h1>
+            <ul>
+                <li id="act"> <i class="fa-solid fa-gauge-high"></i> Dashboard</li>
+                <li onclick="userm()"> <i class="fa-solid fa-user"></i> User management</li>
+                <li> <i class="fa-solid fa-gear"></i> System Configuration</li>
+                <li onclick="report()"> <i class="fa-solid fa-chart-column"></i> Reports</li>
+                 <a href="index.html"><li> <i class="fa-solid fa-power-off"></i>Logout</li></a>
+            </ul>
+        </div>
+
+        <div id="large">
+            <div id="heading"> 
+                <h1>Dashboard</h1>
+                <input type="search" placeholder="search">
+            </div>
+
+            <div id="content">
+                
+                <div id="status"> <h3>Project Status</h3>
+
+                    
+                    
+                    <!-- Progress Bar for Active, Pending, and Inactive projects -->
+                     <div id="progress">
+
+                        <div class="label" id="activeLabel">Active Projects: 0%</div>
+
+                        <div class="progress-container">
+                            <div class="progress-bar" id="activeBar" style="background-color: #4caf50;">0%</div>
+                        </div>
+                        
+                        <div class="label" id="pendingLabel">Pending Projects: 0%</div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" id="pendingBar" style="background-color: #ff9800;">0%</div>
+                        </div>
+                        
+                        <div class="label" id="inactiveLabel">Inactive Projects: 0%</div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-bar" id="inactiveBar" style="background-color: #f44336;">0%</div>
+                        </div>
+                        <canvas id="pieChart" width="400" height="400"></canvas>
+                    </div> 
+                
+            </div>
+
+                
+
+                    <div id="summery">
+                        <h3>Project Summery</h3>
+                <div id="btns">
+                    <button onclick="btncolor(1)" id="abtn1">All Users</button>
+                    <button onclick="btncolor(2)" id="abtn2">Pending Approval</button>
+                    <button onclick="btncolor(3)" id="abtn3">Inactive Users</button>
+                    <button onclick="btncolor(4)" id="abtn4">Active Users</button>
+                </div>
+                
+
+                <div id="tabels">
+                    <fieldset id="field1">
+                        <table>
+                            <th>Project name</th>
+                            <th>Poject type</th>
+                            <th>Team number</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        
+    
+                        <tr>
+                            <td>
+                               <input type="checkbox"> <label for="">Scope Landing </label> <br>
+                               <input type="checkbox"> <label for="">Webinar</label> <br>
+                               <input type="checkbox"> <label for="">Login Page</label> <br>
+                               <input type="checkbox"> <label for="">Presentation</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Website</label> <br>
+                                <label>Campaign</label> <br>
+                                <label>Product design</label> <br>
+                                <label>Marketing</label> <br>
+                            </td>
+                            
+                            <td id="num">
+                                <label>4</label> <br>
+                                <label>6</label> <br>
+                                <label>5 </label> <br>
+                                <label>3</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Bahir Dar</label> <br>
+                                <label>Addis Abeba</label> <br>
+                                <label>Addis Abeba</label> <br>
+                                <label>Gonder</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label style="color: green;">Active</label> <br>
+                                <label style="color: yellow;">Pending</label> <br>
+                                <label style="color: yellow;">Pending</label> <br>
+                                <label style="color: red;">Inactive</label> <br>
+                            </td>
+    
+                        </tr>
+                    </table>
+                        
+                    </fieldset>
+                    
+    
+    
+                    <fieldset id="field2">
+                        <table>
+                            <th>Project name</th>
+                            <th>Poject type</th>
+                            <th>Team number</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        
+    
+                        <tr>
+                            <td>
+                               <input type="checkbox"> <label for="">Designing </label> <br>
+                               <input type="checkbox"> <label for="">Implement</label> <br>
+                               <input type="checkbox"> <label for="">Landing Page</label> <br>
+                               <input type="checkbox"> <label for="">Presentation</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Mobile App</label> <br>
+                                <label>Traning</label> <br>
+                                <label>Promotion</label> <br>
+                                <label>Marketing</label> <br>
+                            </td>
+                            
+                            <td id="num">
+                                <label>4</label> <br>
+                                <label>4</label> <br>
+                                <label>2 </label> <br>
+                                <label>3</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Bahir Dar</label> <br>
+                                <label>Hawassa</label> <br>
+                                <label>Addis Abeba</label> <br>
+                                <label>Gonder</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label style="color: yellow;">Pending</label> <br>
+                                <label style="color: yellow;">Pending</label> <br>
+                                <label style="color: yellow;">Pending</label> <br>
+                                <label style="color: yellow;">Pending</label> <br>
+                            </td>
+    
+                        </tr>
+                    </table>
+                        
+                    </fieldset>
+    
+    
+                    
+                    <fieldset id="field3">
+                        <table>
+                            <th>Project name</th>
+                            <th>Poject type</th>
+                            <th>Team number</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        
+    
+                        <tr>
+                            <td>
+                               <input type="checkbox"> <label for="">PixelHub </label> <br>
+                               <input type="checkbox"> <label for="">HomeSpace</label> <br>
+                               <input type="checkbox"> <label for="">ShopSphere</label> <br>
+                               <input type="checkbox"> <label for="">BattleForge</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>E-commerce</label> <br>
+                                <label>IoT</label> <br>
+                                <label>Promotion</label> <br>
+                                <label>Data Science</label> <br>
+                            </td>
+                            
+                            <td id="num">
+                                <label>3</label> <br>
+                                <label>5</label> <br>
+                                <label>4 </label> <br>
+                                <label>3</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Gonder</label> <br>
+                                <label>Hawassa</label> <br>
+                                <label>Bahir Dar</label> <br>
+                                <label>Gonder</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label style="color: Red;">Inacive</label> <br>
+                                <label style="color: red;">Inacive</label> <br>
+                                <label style="color: red;">Inacive</label> <br>
+                                <label style="color: red;">Inacive</label> <br>
+                            </td>
+    
+                        </tr>
+                    </table>
+                        
+                    </fieldset>
+                    
+    
+    
+                    <fieldset id="field4">
+                        <table>
+                            <th>Project name</th>
+                            <th>Poject type</th>
+                            <th>Team number</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                        
+    
+                        <tr>
+                            <td>
+                               <input type="checkbox"> <label for="">PixelHub </label> <br>
+                               <input type="checkbox"> <label for="">HomeSpace</label> <br>
+                               <input type="checkbox"> <label for="">ShopSphere</label> <br>
+                               <input type="checkbox"> <label for="">BattleForge</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>E-commerce</label> <br>
+                                <label>IoT</label> <br>
+                                <label>Promotion</label> <br>
+                                <label>Data Science</label> <br>
+                            </td>
+                            
+                            <td id="num">
+                                <label>3</label> <br>
+                                <label>5</label> <br>
+                                <label>4 </label> <br>
+                                <label>3</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label>Gonder</label> <br>
+                                <label>Hawassa</label> <br>
+                                <label>Bahir Dar</label> <br>
+                                <label>Gonder</label> <br>
+                            </td>
+    
+                            <td id="num">
+                                <label style="color: green;">Active</label> <br>
+                                <label style="color: green;">Active</label> <br>
+                                <label style="color: green;">Active</label> <br>
+                                <label style="color: green;">Active</label> <br>
+                            </td>
+    
+                        </tr>
+                    </table>
+                        
+                    </fieldset>
+                </div>
+                
+                    </div>
+                
+                
+
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+
+
+    <div id="userr" style="display: none;">
+        <div id="small">
+            <h1 style="text-align: center;">Admin</h1>
+            <ul>
+                <li onclick="dash()"> <i class="fa-solid fa-gauge-high"></i> Dashboard</li>
+                <li onclick="userm()" id="act"> <i class="fa-solid fa-user"></i> User management</li>
+                <li> <i class="fa-solid fa-gear"></i> System Configuration</li>
+                <li onclick="report()"> <i class="fa-solid fa-chart-column"></i> Reports</li>
+                <a href="index.html"><li> <i class="fa-solid fa-power-off"></i>Logout</li></a>
+            </ul>
+        </div>
+        <div id="usertable">
+            <div id="uheading">
+                
+                <h1>User Management</h1>
+                <div id="left">
+                    <input type="search" placeholder="search">
+                    <button type="submit">Add User</button>
+                </div>
+                
+            </div>
+            
+            <table>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Action</th>
+    
+                <tr>
+                    <td>ruth@00</td>
+                    <td>ruthgizat@gmail.com</td>
+                    <td>Manager</td>
+                    <td>Active</td>
+                    <td><i class="fa-solid fa-pen"></i></td>
+                </tr>
+    
+                <tr>
+                    <td>betel@00</td>
+                    <td>betelgizat@gmail.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td><i class="fa-solid fa-pen"></i></td>
+                </tr>
+    
+                <tr>
+                    <td>abel@01</td>
+                    <td>abelsam@gmail.com</td>
+                    <td>User</td>
+                    <td>Active</td>
+                    <td><i class="fa-solid fa-pen"></i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+
+
+
+    <div id="report" style="display: none;">
+        <div id="small">
+            <h1 style="text-align: center;">Admin</h1>
+            <ul>
+                <li onclick="dash()"> <i class="fa-solid fa-gauge-high"></i> Dashboard</li>
+                <li onclick="userm()"> <i class="fa-solid fa-user"></i> User management</li>
+                <li> <i class="fa-solid fa-gear"></i> System Configuration</li>
+                <li onclick="report()" id="act"> <i class="fa-solid fa-chart-column"></i> Reports</li>
+                <a href="index.html"><li> <i class="fa-solid fa-power-off"></i>Logout</li></a>
+            </ul>
+        </div>
+        <div id="side">
+            <div id="up">
+                <div id="upleft">
+
+                    <div id="rheading">
+                        <h1>Reports</h1>
+                        <input type="search" placeholder="search">
+                    </div>   
+                    <p>
+                        The performance data across the five months reveals a significant variation.
+                        In January, the performance starts off relatively low at 42%, indicating that there was room for improvement. 
+                        February shows an impressive surge to 90%, demonstrating a peak in performance, possibly due to successful strategies or efforts. 
+                    </p>  
+                </div>
+
+                <div id="upright">
+                    <!-- Make sure canvas has width and height -->
+                    <canvas id="mychart" width="400" height="400"></canvas>
+               
+                </div>
+            </div>
+        
+            <div id="down">
+                <div id="downleft">
+                    <h3>Review reports</h3>
+                    
+                    <input type="checkbox" id="week"> 
+                    <label for="week">Weekly report</label><br>
+
+                    <input type="checkbox" id="nonth">
+                    <label for="month">Monthly report</label><br>
+                    
+                    <input type="checkbox" id="annual">
+                    <label for="annual">Annual report</label>
+
+                </div>
+                <div id="downright">
+                    <table>
+                        <th>Jan</th>
+                        <th>Feb</th>
+                        <th>Mar</th>
+                        <th>Apr</th>
+                        <th>May</th>
+                        
+                        <tr>
+                            <td>42%</td>
+                            <td>90%</td>
+                            <td>35%</td>
+                            <td>75%</td>
+                            <td>55%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        
+        <!-- Chart.js library -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Your custom script.js -->
+        <script src="script.js"></script>
+        
+</body>
+</html>
